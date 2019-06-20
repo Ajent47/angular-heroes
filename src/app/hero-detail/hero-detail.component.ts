@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Hero } from '../hero';
+import { IHero } from '../hero';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { HeroService } from '../hero.service';
@@ -16,7 +16,7 @@ export class HeroDetailComponent implements OnInit {
     private heroService: HeroService
   ) { }
 
-  @Input() hero: Hero;
+  @Input() hero: IHero;
 
   ngOnInit() {
     this.getHero();
